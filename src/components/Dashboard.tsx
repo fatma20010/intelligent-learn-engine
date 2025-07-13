@@ -38,7 +38,7 @@ export const Dashboard = () => {
   ];
 
   return (
-    <div className="space-y-6 mt-6 px-4 md:px-8">
+    <div className="space-y-6 mt-4 px-2 sm:mt-6 sm:px-8">
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => (

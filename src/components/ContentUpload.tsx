@@ -74,10 +74,10 @@ export const ContentUpload = () => {
   const mainPdf = uploadedFiles.find(f => f.name.toLowerCase().endsWith('.pdf'));
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="max-w-4xl mx-auto space-y-6 px-2 sm:px-0">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold text-white">Create AI-Powered Course</h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white">Create AI-Powered Course</h2>
+        <p className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg">
           Upload your educational content and let our AI transform it into an engaging, 
           interactive course with photorealistic avatars and immersive environments.
         </p>
@@ -85,10 +85,10 @@ export const ContentUpload = () => {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* File Upload Section */}
-        <Card className="bg-white/5 backdrop-blur-md border-white/10">
+        <Card className="bg-white/5 backdrop-blur-md border-white/10 p-4 sm:p-6">
           <CardHeader>
-            <CardTitle className="text-white">Upload Content</CardTitle>
-            <CardDescription className="text-gray-300">
+            <CardTitle className="text-lg sm:text-xl text-white">Upload Content</CardTitle>
+            <CardDescription className="text-gray-300 text-sm sm:text-base">
               Upload PDFs, videos, images, or text files to create your course
             </CardDescription>
           </CardHeader>

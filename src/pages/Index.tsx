@@ -29,35 +29,34 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <header className="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-6">
+        <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between items-center gap-2 sm:gap-0">
+            <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
               <img
                 src={activeTab === 'courses' ? '/infinite-logo-aca.png' : '/infinite-logo.png'}
                 alt="iKnowledge Tech Logo"
-                className="w-80 h-48 object-contain bg-transparent mx-auto"
+                className="w-32 h-16 sm:w-56 sm:h-32 md:w-80 md:h-48 object-contain bg-transparent mx-auto"
               />
             </div>
-            
-            <nav className="flex items-center space-x-1">
+            <nav className="flex flex-wrap items-center justify-center gap-1 sm:gap-1 mt-2 sm:mt-0">
               <Button
                 variant={activeTab === 'dashboard' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('dashboard')}
-                className="text-white hover:bg-white/10 text-lg py-3 px-6"
+                className="text-white hover:bg-white/10 text-base sm:text-lg py-2 px-4 sm:py-3 sm:px-6"
               >
                 Backend
               </Button>
               <Button
                 variant={activeTab === 'courses' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('courses')}
-                className="text-white hover:bg-white/10 text-lg py-3 px-6"
+                className="text-white hover:bg-white/10 text-base sm:text-lg py-2 px-4 sm:py-3 sm:px-6"
               >
                 Courses Available
               </Button>
               <Button
                 variant={activeTab === 'upload' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('upload')}
-                className="text-white hover:bg-white/10 text-lg py-3 px-6"
+                className="text-white hover:bg-white/10 text-base sm:text-lg py-2 px-4 sm:py-3 sm:px-6"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create
@@ -68,7 +67,7 @@ const Index = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
         {activeTab === 'dashboard' && (
           <div className="space-y-8">
             {/* Welcome Section */}

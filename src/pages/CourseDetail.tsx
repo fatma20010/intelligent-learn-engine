@@ -501,11 +501,11 @@ const CourseDetail = () => {
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-company-primary via-[#3F2097] to-company-secondary opacity-80 blur-2xl animate-gradient-x z-0" />
       <div className="w-full max-w-3xl relative z-10 flex">
-        <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl shadow-2xl p-10 border border-white/20 overflow-hidden flex-1">
+        <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl shadow-2xl p-4 sm:p-10 border border-white/20 overflow-hidden flex-1">
           {/* Watermark */}
           {logoWatermark}
           {/* Course Title */}
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight text-center drop-shadow-xl font-sans">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight text-center drop-shadow-xl font-sans">
             {course.title}
           </h1>
           <div className="text-center text-company-secondary text-lg italic mb-4 font-glacial">“Knowledge is the new gold.”</div>
@@ -542,7 +542,7 @@ const CourseDetail = () => {
                 <video
                   src={chapter.videoUrl}
                   controls
-                  className="w-full h-64 md:h-96 bg-black"
+                  className="w-full h-40 sm:h-64 md:h-96 bg-black"
                 />
               </div>
               {/* Quiz Link and Interactive Quiz */}
@@ -550,14 +550,14 @@ const CourseDetail = () => {
                 {!showQuiz && chapter.quiz && (
                   <button
                     onClick={() => setShowQuiz(true)}
-                    className="inline-block bg-company-primary hover:bg-company-secondary text-white font-bold py-4 px-10 rounded-xl shadow-lg transition-colors duration-200 text-xl tracking-wide border-2 border-company-secondary mb-6"
+                    className="inline-block bg-company-primary hover:bg-company-secondary text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-xl shadow-lg transition-colors duration-200 text-lg sm:text-xl tracking-wide border-2 border-company-secondary mb-6"
                   >
                     Take the Quiz
                   </button>
                 )}
                 {showQuiz && chapter.quiz && (
                   <div className="w-full max-w-xl">
-                    <h3 className="text-xl font-bold text-company-secondary mb-4">Quiz</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-company-secondary mb-4">Quiz</h3>
                     {chapter.quiz.map((q, qi) => (
                       <QuizQuestion key={qi} question={q} />
                     ))}
