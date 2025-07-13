@@ -10,7 +10,7 @@ const courses = [
       { 
         id: "0", 
         title: "Chapter 0: Introduction", 
-        videoUrl: "/public/video/Chapter 0 - Course Introduction (online-video-cutter.com).mp4", 
+        videoUrl: "/video/Chapter 0 - Course Introduction (online-video-cutter.com).mp4", 
         quizUrl: "https://example.com/quiz-chapter-0",
         quiz: [
           {
@@ -46,7 +46,7 @@ const courses = [
       { 
         id: "1", 
         title: "Chapter 1: Crypto Basics", 
-        videoUrl: "/public/video/Chapter 1.mp4", 
+        videoUrl: "/video/Chapter 1.mp4", 
         quizUrl: "https://example.com/quiz-chapter-1",
         quiz: [
           {
@@ -82,7 +82,7 @@ const courses = [
       { 
         id: "2", 
         title: "Chapter 2: Wallets", 
-        videoUrl: "/public/video/Chapter 2.mp4", 
+        videoUrl: "/video/Chapter 2.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -128,7 +128,7 @@ const courses = [
       { 
         id: "3", 
         title: "Chapter 3: Exchanges", 
-        videoUrl: "/public/video/Chapter3.mp4", 
+        videoUrl: "/video/Chapter3.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -174,7 +174,7 @@ const courses = [
       { 
         id: "4", 
         title: "Chapter 4: Buying Crypto", 
-        videoUrl: "/public/video/Chapitre4.mp4", 
+        videoUrl: "/video/Chapitre4.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -220,7 +220,7 @@ const courses = [
       { 
         id: "5", 
         title: "Chapter 5: Portfolio and Risk Management", 
-        videoUrl: "/public/video/chapitre 5.mp4", 
+        videoUrl: "/video/chapitre 5.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -266,7 +266,7 @@ const courses = [
       { 
         id: "6", 
         title: "Chapter 6: Avoiding Scams", 
-        videoUrl: "/public/video/chapitre6.mp4", 
+        videoUrl: "/video/chapitre6.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -312,7 +312,7 @@ const courses = [
       { 
         id: "7", 
         title: "Chapter 7: Strategies", 
-        videoUrl: "/public/video/chapitre7.mp4", 
+        videoUrl: "/video/chapitre7.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -358,7 +358,7 @@ const courses = [
       { 
         id: "8", 
         title: "Chapter 8: Market Psychology", 
-        videoUrl: "/public/video/chapitre8.mp4", 
+        videoUrl: "/video/chapitre8.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
@@ -404,7 +404,7 @@ const courses = [
       { 
         id: "9", 
         title: "Chapter 9: Final Project", 
-        videoUrl: "/public/video/chapitre9.mp4", 
+        videoUrl: "/video/chapitre9.mp4", 
         quizUrl: "https://example.com/quiz-chapter-2",
         quiz: [
           {
