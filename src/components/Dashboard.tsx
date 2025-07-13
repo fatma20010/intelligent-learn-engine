@@ -32,7 +32,7 @@ export const Dashboard = () => {
       title: "DeFi & The Future of Finance",
       progress: 60,
       duration: "1.8 hours",
-      status: "Generating",
+      status: "Ready",
       type: "Text Content"
     }
   ];

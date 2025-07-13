@@ -31,11 +31,11 @@ const Index = () => {
       <header className="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between items-center gap-2 sm:gap-0">
-            <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
+            <div className={`flex items-center w-full sm:w-auto ${activeTab === 'courses' ? 'justify-start' : 'justify-start'}`}>
               <img
                 src={activeTab === 'courses' ? '/infinite-logo-aca.png' : '/infinite-logo.png'}
                 alt="iKnowledge Tech Logo"
-                className="w-32 h-16 sm:w-56 sm:h-32 md:w-80 md:h-48 object-contain bg-transparent mx-auto"
+                className={`w-40 h-20 sm:w-56 sm:h-32 md:w-80 md:h-48 object-contain bg-transparent ${activeTab === 'courses' ? 'ml-[-2rem] sm:ml-[-3rem]' : ''}`}
               />
             </div>
             <nav className="flex flex-wrap items-center justify-center gap-1 sm:gap-1 mt-2 sm:mt-0">

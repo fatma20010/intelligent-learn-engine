@@ -164,9 +164,9 @@ export const CourseGrid = () => {
                       <Button size="sm" className="w-full sm:w-auto">Continue</Button>
                     </Link>
                   ) : (
-                    <Button size="sm" disabled className="w-full sm:w-auto">
-                      Generating...
-                    </Button>
+                    <div className="flex w-full justify-center">
+                      <Button size="sm" disabled className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold opacity-80 cursor-not-allowed">Generating...</Button>
+                    </div>
                   )}
                 </div>
               </div>
