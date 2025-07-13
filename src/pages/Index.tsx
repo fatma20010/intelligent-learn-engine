@@ -31,35 +31,12 @@ const Index = () => {
       <header className="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="flex flex-col items-center justify-center">
-                <img src="/infinite-logo.png" alt="Infinite Knowledge Logo" className="w-48 h-24 object-contain bg-transparent mx-auto" style={{ marginBottom: '8px' }} />
-                <span className="text-4xl font-semibold text-white tracking-wide leading-none text-center w-44 ml-1" style={{ letterSpacing: '0.15em' }}>INFINITE</span>
-                <div className="flex flex-col items-center w-44">
-                  <svg width="220" height="36" viewBox="0 0 220 36" style={{ display: 'block', marginTop: '-8px' }}>
-                    <line x1="26" y1="22" x2="45" y2="22" stroke="#fff" strokeWidth="2" />
-                    <line x1="26" y1="22" x2="45" y2="22" stroke="#8f5cff" strokeWidth="1" />
-                    <text
-                      x="120"
-                      y="22"
-                      textAnchor="middle"
-                      fontFamily="inherit"
-                      fontSize="18"
-                      fontWeight="extrabold"
-                      fill="#8f5cff"
-                      stroke="#fff"
-                      strokeWidth="1.5"
-                      paintOrder="stroke"
-                      letterSpacing="0.15em"
-                      dominantBaseline="middle"
-                    >
-                      KNOWLEDGE
-                    </text>
-                    <line x1="209" y1="22" x2="190" y2="22" stroke="#fff" strokeWidth="2" />
-                    <line x1="209" y1="22" x2="190" y2="22" stroke="#8f5cff" strokeWidth="1" />
-                  </svg>
-                </div>
-              </div>
+            <div className="flex items-center space-x-6">
+              <img
+                src={activeTab === 'courses' ? '/infinite-logo-aca.png' : '/infinite-logo.png'}
+                alt="iKnowledge Tech Logo"
+                className="w-80 h-48 object-contain bg-transparent mx-auto"
+              />
             </div>
             
             <nav className="flex items-center space-x-1">
