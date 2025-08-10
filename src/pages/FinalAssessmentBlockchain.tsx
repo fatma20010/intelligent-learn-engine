@@ -302,7 +302,7 @@ export default function FinalAssessmentBlockchain() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-company-primary via-[#3F2097] to-company-secondary py-12 px-2 flex justify-center items-start relative">
+    <div className="min-h-screen bg-gradient-to-br from-white via-company-primary to-company-secondary py-12 px-2 flex justify-center items-start relative">
       {/* AI focus/phone detection */}
       <FocusDetection />
       {/* Course chatbot (Blockchain Fundamentals) */}

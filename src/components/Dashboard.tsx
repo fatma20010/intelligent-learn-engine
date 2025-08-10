@@ -8,7 +8,7 @@ import { Clock, Book, Video, Search } from "lucide-react";
 export const Dashboard = () => {
   const stats = [
     { label: "Total Courses", value: 12, icon: Book, color: "from-blue-500 to-cyan-500" },
-    { label: "Hours Created", value: 48, icon: Clock, color: "from-purple-500 to-pink-500" },
+  { label: "Hours Created", value: 48, icon: Clock, color: "from-company-primary to-company-secondary" },
     { label: "AI Generations", value: 156, icon: Video, color: "from-green-500 to-teal-500" },
     { label: "Active Learners", value: 2341, icon: Search, color: "from-orange-500 to-red-500" }
   ];

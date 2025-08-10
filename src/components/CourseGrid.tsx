@@ -88,7 +88,7 @@ export const CourseGrid = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-white">Your Courses</h2>
           <p className="text-gray-300 mt-2 text-base sm:text-lg">AI-enhanced learning experiences</p>
         </div>
-        <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-base sm:text-lg px-4 sm:px-6 py-2 sm:py-3">
+        <Button className="bg-gradient-to-r from-company-primary to-company-secondary hover:brightness-110 text-base sm:text-lg px-4 sm:px-6 py-2 sm:py-3 border border-white/20 shadow-md">
           Create New Course
         </Button>
       </div>
@@ -161,11 +161,13 @@ export const CourseGrid = () => {
                   </div>
                   {course.status === 'Ready' ? (
                     <Link to={`/course/${course.id}`} className="w-full sm:w-auto">
-                      <Button size="sm" className="w-full sm:w-auto">Continue</Button>
+                      <Button size="sm" className="w-full sm:w-auto bg-company-primary hover:bg-company-secondary text-white border border-white/20 shadow">
+                        Continue
+                      </Button>
                     </Link>
                   ) : (
                     <div className="flex w-full justify-center">
-                      <Button size="sm" disabled className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold opacity-80 cursor-not-allowed">Generating...</Button>
+                      <Button size="sm" disabled className="w-full sm:w-auto bg-gradient-to-r from-company-primary to-company-secondary text-white font-bold opacity-80 cursor-not-allowed">Generating...</Button>
                     </div>
                   )}
                 </div>

@@ -26,7 +26,7 @@ const Index = () => {
   }, [searchParams]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-white via-company-primary to-company-secondary">
       {/* Header */}
       <header className="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-4">
@@ -96,7 +96,7 @@ const Index = () => {
 
               <Card className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-company-primary to-company-secondary rounded-lg flex items-center justify-center mb-4">
                     <Video className="w-6 h-6 text-white" />
                   </div>
                   <CardTitle className="text-white">AI Avatars</CardTitle>

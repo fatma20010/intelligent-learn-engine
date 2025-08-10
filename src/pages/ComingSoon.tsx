@@ -23,9 +23,9 @@ const ComingSoon = () => {
   const courseTitle = courseTitles[id as keyof typeof courseTitles] || "Course";
 
   return (
-    <div className="min-h-screen w-full flex justify-center items-center bg-gradient-to-br from-company-primary via-[#3F2097] to-company-secondary animate-gradient-x relative overflow-hidden">
+  <div className="min-h-screen w-full flex justify-center items-center bg-gradient-to-br from-white via-company-primary to-company-secondary animate-gradient-x relative overflow-hidden">
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-company-primary via-[#3F2097] to-company-secondary opacity-80 blur-2xl animate-gradient-x z-0" />
+    <div className="absolute inset-0 bg-gradient-to-br from-white via-company-primary to-company-secondary opacity-80 blur-2xl animate-gradient-x z-0" />
       
       <div className="w-full max-w-4xl relative z-10 flex justify-center">
         <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl shadow-2xl p-12 border border-white/20 overflow-hidden">

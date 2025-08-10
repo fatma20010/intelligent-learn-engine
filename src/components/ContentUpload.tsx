@@ -245,7 +245,7 @@ export const ContentUpload = () => {
           <Button
             type="submit"
             size="lg"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3"
+            className="bg-gradient-to-r from-company-primary to-company-secondary hover:brightness-110 text-white px-8 py-3"
             disabled={uploadedFiles.length === 0 || !courseTitle}
           >
             Generate AI Course

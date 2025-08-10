@@ -63,10 +63,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				company: {
-					primary: '#3F2097',
+					// Brand palette: white, blue (#003d7e), red (#c21904)
+					primary: '#003d7e',
 					gray: '#7F8184',
-					secondary: '#61CBE2',
-					pink: '#EF4BAD',
+					secondary: '#c21904',
+					pink: '#c21904',
 					gold: '#FFD700',
 					silver: '#C0C0C0',
 				}
