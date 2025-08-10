@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CourseDetail from "./pages/CourseDetail";
 import FinalAssessment from "./pages/FinalAssessment";
+import FinalAssessmentBlockchain from "./pages/FinalAssessmentBlockchain";
 import ComingSoon from "./pages/ComingSoon";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/course/:id" element={<CourseDetail />} />
           <Route path="/coming-soon/:id" element={<ComingSoon />} />
           <Route path="/final-assessment" element={<FinalAssessment />} />
+          <Route path="/final-assessment-blockchain" element={<FinalAssessmentBlockchain />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

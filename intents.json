@@ -1,0 +1,392 @@
+[
+   {
+      "tag": "crypto_definition",
+      "patterns": [
+         "What is cryptocurrency?",
+         "Can you explain cryptocurrency?",
+         "What does crypto mean?",
+         "Tell me about cryptocurrencies",
+         "What's the definition of crypto?"
+      ],
+      "responses": [
+         "Cryptocurrency is digital money that exists online, secured by cryptography, which acts like a secret code to protect it. It operates on a blockchain, a public ledger that records all transactions permanently.",
+         "It's a type of digital currency, like Bitcoin or Ethereum, that you can't hold physically. It uses cryptography for security and runs on a decentralized blockchain."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "blockchain_explanation",
+      "patterns": [
+         "What is a blockchain?",
+         "How does blockchain work?",
+         "Explain blockchain to me",
+         "What's the deal with blockchain?",
+         "Can you tell me about blockchain?"
+      ],
+      "responses": [
+         "A blockchain is like a giant, public notebook that records every cryptocurrency transaction. It's stored across thousands of computers, making it secure and unchangeable, like writing in permanent marker.",
+         "Blockchain is a decentralized ledger that logs all crypto transactions. Once a transaction is added, it can't be erased, ensuring transparency and security."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "coin_vs_token",
+      "patterns": [
+         "What's the difference between coins and tokens?",
+         "Explain coins versus tokens",
+         "Are coins and tokens the same?",
+         "What are crypto coins and tokens?",
+         "How do coins differ from tokens?"
+      ],
+      "responses": [
+         "Coins, like Bitcoin, have their own blockchain and act like the main currency of that network. Tokens, like those on Ethereum, use another blockchain and are like gift cards for specific apps or services.",
+         "Coins are the native currency of a blockchain, while tokens are built on top of someone else's blockchain, used for specific purposes like apps or games."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "bitcoin_basics",
+      "patterns": [
+         "What is Bitcoin?",
+         "Tell me about Bitcoin",
+         "How does Bitcoin work?",
+         "Why is Bitcoin famous?",
+         "What's special about Bitcoin?"
+      ],
+      "responses": [
+         "Bitcoin is the first and most famous cryptocurrency, a digital money that runs on its own blockchain. It’s secure, decentralized, and recorded in a public ledger.",
+         "Bitcoin is a coin that operates on its own blockchain, allowing peer-to-peer transactions without banks, secured by cryptography."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "crypto_wallet_definition",
+      "patterns": [
+         "What is a crypto wallet?",
+         "How does a crypto wallet work?",
+         "Explain crypto wallets",
+         "What's a wallet in crypto?",
+         "Can you tell me about crypto wallets?"
+      ],
+      "responses": [
+         "A crypto wallet is like a digital safe that stores your private keys, which are secret codes allowing you to access your cryptocurrency on the blockchain.",
+         "It doesn’t hold your crypto directly but keeps the keys to unlock your funds on the blockchain, like a keychain for your digital treasure."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "hot_wallet",
+      "patterns": [
+         "What is a hot wallet?",
+         "Explain hot wallets",
+         "How do hot wallets work?",
+         "What's an online crypto wallet?",
+         "Are hot wallets safe?"
+      ],
+      "responses": [
+         "Hot wallets are online crypto wallets, like phone apps or browser extensions, convenient for quick access but more vulnerable to hackers due to their internet connection.",
+         "A hot wallet is connected to the internet, making it easy to use for transactions but less secure than offline options."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "cold_wallet",
+      "patterns": [
+         "What is a cold wallet?",
+         "How does a cold wallet work?",
+         "Explain cold wallets",
+         "What's an offline crypto wallet?",
+         "Are cold wallets secure?"
+      ],
+      "responses": [
+         "Cold wallets are offline crypto wallets, like USB drives or paper with your keys written down, offering high security but less convenience for daily use.",
+         "A cold wallet stores your private keys offline, like a buried safe, making it very secure but harder to access quickly."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "wallet_security",
+      "patterns": [
+         "How do I keep my crypto wallet safe?",
+         "What are the best ways to secure a wallet?",
+         "How to protect my crypto wallet?",
+         "Tips for crypto wallet security",
+         "Is my crypto wallet secure?"
+      ],
+      "responses": [
+         "To secure your wallet, use a strong password, enable two-factor authentication, back up your seed phrase offline, and avoid public Wi-Fi when accessing it.",
+         "Protect your wallet with a complex password, 2FA, and an offline seed phrase backup. Never share your private keys or use public networks."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "seed_phrase",
+      "patterns": [
+         "What is a seed phrase?",
+         "Explain seed phrases in crypto",
+         "How does a seed phrase work?",
+         "What's a recovery phrase?",
+         "Why is a seed phrase important?"
+      ],
+      "responses": [
+         "A seed phrase is a list of secret words that can recover your crypto wallet if you lose access. Keep it offline and never share it.",
+         "It’s a set of words that acts as a backup key to restore your wallet. Store it securely offline to prevent loss or theft."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "crypto_exchange",
+      "patterns": [
+         "What is a crypto exchange?",
+         "How do crypto exchanges work?",
+         "Explain crypto exchanges",
+         "What's a marketplace for crypto?",
+         "Can you tell me about exchanges?"
+      ],
+      "responses": [
+         "A crypto exchange is an online marketplace where you buy, sell, or trade cryptocurrencies, like Coinbase (centralized) or Uniswap (decentralized).",
+         "Exchanges are platforms where users trade crypto. Centralized ones are beginner-friendly, while decentralized ones offer more control."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "centralized_exchange",
+      "patterns": [
+         "What is a centralized exchange?",
+         "Explain CEX in crypto",
+         "How does a CEX work?",
+         "What's a managed crypto exchange?",
+         "Are centralized exchanges safe?"
+      ],
+      "responses": [
+         "A centralized exchange (CEX), like Coinbase or Binance, is run by a company, making it user-friendly for beginners but less decentralized.",
+         "CEXs are managed platforms where you can buy and sell crypto easily, with the company handling security and transactions."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "decentralized_exchange",
+      "patterns": [
+         "What is a decentralized exchange?",
+         "Explain DEX in crypto",
+         "How does a DEX work?",
+         "What's a peer-to-peer crypto exchange?",
+         "Are decentralized exchanges better?"
+      ],
+      "responses": [
+         "A decentralized exchange (DEX), like Uniswap, lets users trade crypto directly with each other using blockchain tech, offering more control but being more complex.",
+         "DEXs are peer-to-peer marketplaces without a central authority, relying on smart contracts for trades, ideal for advanced users."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "kyc_process",
+      "patterns": [
+         "What is KYC in crypto?",
+         "How does KYC work on exchanges?",
+         "Why do I need KYC for crypto?",
+         "What's the KYC process?",
+         "Explain KYC for exchanges"
+      ],
+      "responses": [
+         "KYC (Know Your Customer) is a verification process where you upload your ID to an exchange to confirm your identity, ensuring security and compliance.",
+         "KYC requires submitting identification documents to exchanges to prevent fraud and meet regulatory requirements before trading."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "buying_crypto",
+      "patterns": [
+         "How do I buy cryptocurrency?",
+         "What's the process to buy crypto?",
+         "Can you explain how to purchase crypto?",
+         "How to get started with buying crypto?",
+         "Steps to buy Bitcoin"
+      ],
+      "responses": [
+         "To buy crypto, set up an exchange account, complete KYC, fund it with a bank transfer or card, choose a crypto like Bitcoin, and place a market order.",
+         "Sign up on a centralized exchange, verify your ID, deposit money, select a cryptocurrency, and buy using a market order. Then transfer it to your wallet."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "market_order",
+      "patterns": [
+         "What is a market order?",
+         "How does a market order work?",
+         "Explain market orders in crypto",
+         "What's buying at market price?",
+         "Can you tell me about market orders?"
+      ],
+      "responses": [
+         "A market order is when you buy crypto at the current market price, like grabbing an item off the shelf, ensuring a quick purchase.",
+         "It’s an order to buy or sell crypto immediately at the best available price on the exchange."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "transfer_to_wallet",
+      "patterns": [
+         "How do I move crypto to my wallet?",
+         "What's the process to transfer crypto?",
+         "How to send crypto to a wallet?",
+         "Can I transfer crypto from an exchange?",
+         "Steps to move Bitcoin to a wallet"
+      ],
+      "responses": [
+         "To transfer crypto, open your wallet, copy its address, go to the exchange, select withdraw, paste the address, enter the amount, double-check, and send.",
+         "Copy your wallet’s address, use the exchange’s withdraw option, paste the address, confirm the amount, and ensure the address is correct before sending."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "diversification",
+      "patterns": [
+         "What is diversification in crypto?",
+         "Why should I diversify my crypto?",
+         "How do I diversify my investments?",
+         "What's spreading risk in crypto?",
+         "Explain diversification for crypto"
+      ],
+      "responses": [
+         "Diversification means spreading your investment across multiple cryptocurrencies, like Bitcoin and Ethereum, to reduce risk if one drops in value.",
+         "By investing in different cryptos, you lower the chance of losing everything if one coin crashes, like planting different seeds."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "dollar_cost_averaging",
+      "patterns": [
+         "What is dollar-cost averaging?",
+         "How does DCA work in crypto?",
+         "Explain dollar-cost averaging",
+         "What's DCA in investing?",
+         "Can you tell me about DCA?"
+      ],
+      "responses": [
+         "Dollar-cost averaging (DCA) is investing a fixed amount regularly, like $20 monthly, to smooth out price swings and reduce risk.",
+         "DCA involves buying small amounts of crypto consistently over time, helping you avoid buying at peak prices."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "stop_loss",
+      "patterns": [
+         "What is a stop-loss order?",
+         "How do stop-loss orders work?",
+         "Explain stop-loss in crypto",
+         "What's a stop-loss for trading?",
+         "Can you tell me about stop-loss?"
+      ],
+      "responses": [
+         "A stop-loss order automatically sells your crypto if its price drops to a set level, helping limit losses during a market dip.",
+         "It’s a tool to protect your investment by selling automatically when a crypto’s price falls below your chosen threshold."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "crypto_scams",
+      "patterns": [
+         "What are common crypto scams?",
+         "How do I spot a crypto scam?",
+         "What scams should I avoid in crypto?",
+         "Tell me about crypto frauds",
+         "Are there scams in cryptocurrency?"
+      ],
+      "responses": [
+         "Common scams include phishing (fake emails/websites), Ponzi schemes (paying old users with new money), and fake ICOs (hyped coins that vanish).",
+         "Watch for red flags like guaranteed profits, urgent pressure, or vague team info, and always verify before investing."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "phishing_scam",
+      "patterns": [
+         "What is phishing in crypto?",
+         "How do phishing scams work?",
+         "Explain phishing attacks in crypto",
+         "What's a fake crypto email?",
+         "How to avoid phishing scams?"
+      ],
+      "responses": [
+         "Phishing scams use fake emails or websites to trick you into sharing your private keys or login details. Always verify URLs and never share keys.",
+         "Scammers pose as legitimate platforms to steal your info. Check for suspicious links and use trusted sites only."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "ponzi_scheme",
+      "patterns": [
+         "What is a Ponzi scheme in crypto?",
+         "How do Ponzi schemes work?",
+         "Explain Ponzi schemes in crypto",
+         "What's a crypto Ponzi scam?",
+         "Are Ponzi schemes common in crypto?"
+      ],
+      "responses": [
+         "A Ponzi scheme pays old investors with new investors’ money, promising high returns until it collapses. Beware of guaranteed profit claims.",
+         "It’s a scam where returns come from new users’ funds, not real profits, and it fails when new money stops coming."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "hodl_strategy",
+      "patterns": [
+         "What is HODL in crypto?",
+         "How does HODL work?",
+         "Explain the HODL strategy",
+         "What's holding crypto long-term?",
+         "Tell me about HODL"
+      ],
+      "responses": [
+         "HODL means 'Hold On for Dear Life,' where you buy crypto and keep it for years, riding out price ups and downs for long-term gains.",
+         "It’s a strategy of holding your crypto long-term, ignoring short-term price swings, aiming for future value growth."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "swing_trading",
+      "patterns": [
+         "What is swing trading in crypto?",
+         "How does swing trading work?",
+         "Explain swing trading for crypto",
+         "What's buying low and selling high?",
+         "Can you tell me about swing trading?"
+      ],
+      "responses": [
+         "Swing trading involves buying crypto at low prices and selling at higher prices within days or weeks, aiming for quick profits but with higher risk.",
+         "It’s a short-term strategy where you trade based on price swings, requiring time and market analysis."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "fear_and_greed",
+      "patterns": [
+         "What is the Fear and Greed Index?",
+         "How does fear and greed affect crypto?",
+         "Explain fear and greed in markets",
+         "What's the mood meter for crypto?",
+         "Tell me about fear and greed"
+      ],
+      "responses": [
+         "The Fear and Greed Index tracks market emotions. High greed means buying frenzies; high fear leads to panic selling, affecting crypto prices.",
+         "It’s a tool showing if investors are too greedy (buying) or fearful (selling), influencing market trends."
+      ],
+      "context": [""]
+   },
+   {
+      "tag": "fomo_crypto",
+      "patterns": [
+         "What is FOMO in crypto?",
+         "How does FOMO affect investing?",
+         "Explain fear of missing out",
+         "What's FOMO in the crypto market?",
+         "Tell me about FOMO"
+      ],
+      "responses": [
+         "FOMO, or fear of missing out, is when you buy crypto because prices are rising, often leading to buying high and losing if prices drop.",
+         "It’s an emotional urge to jump into a rising market, which can lead to bad decisions if you buy at peak prices."
+      ],
+      "context": [""]
+   }
+]

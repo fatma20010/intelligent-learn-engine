@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
+import FocusDetection from "@/components/FocusDetection";
+import CourseChatbot from "@/components/CourseChatbot";
 import { useNavigate } from "react-router-dom";
 
 const questions = [
@@ -275,7 +277,7 @@ function FinalAssessment() {
     selected.forEach((ans, i) => {
       if (ans !== null) {
         answered++;
-        if (ans === questions[i].correct) correct++;
+        if (ans === shuffledQuestions[i].correct) correct++;
       }
     });
     setScore(correct);
@@ -296,12 +298,33 @@ function FinalAssessment() {
     a.click();
   };
 
+  // Shuffle per session so order varies each refresh
+  const shuffleArray = <T,>(arr: T[]): T[] => {
+    const copy = [...arr];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  };
+  const shuffleQuestion = (q: any) => {
+    const indexed = (q.choices as string[]).map((choice, idx) => ({ choice, idx }));
+    const shuffled = shuffleArray(indexed);
+    const newCorrect = shuffled.findIndex((x) => x.idx === q.correct);
+    return { question: q.question, choices: shuffled.map((x) => x.choice), correct: newCorrect };
+  };
+  const shuffledQuestions = useMemo(() => shuffleArray(questions).map(shuffleQuestion), []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-company-primary via-[#3F2097] to-company-secondary py-12 px-2 flex justify-center items-start">
+    <div className="min-h-screen bg-gradient-to-br from-company-primary via-[#3F2097] to-company-secondary py-12 px-2 flex justify-center items-start relative">
+      {/* AI focus/phone detection */}
+      <FocusDetection />
+      {/* Course chatbot (Crypto Investing 101) */}
+      <CourseChatbot />
       <div className="w-full max-w-3xl bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white/10">
         <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight text-center drop-shadow-lg">Final Assessment</h1>
         <p className="text-lg text-company-secondary text-center mb-8">Answer all questions. You must get at least 15 correct to pass.</p>
-        {questions.map((q, qi) => (
+        {shuffledQuestions.map((q, qi) => (
           <div key={qi} className="mb-8">
             <div className="font-semibold text-white mb-2">{qi + 1}. {q.question}</div>
             <div className="flex flex-col gap-2">

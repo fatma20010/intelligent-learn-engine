@@ -1,0 +1,217 @@
+[
+    {
+      "tag": "blockchain_definition",
+      "patterns": [
+        "What is blockchain?",
+        "Can you explain blockchain?",
+        "How does blockchain work?",
+        "Tell me about blockchain technology",
+        "What's the definition of blockchain?"
+      ],
+      "responses": [
+        "Blockchain is a decentralized, immutable ledger that records transactions in blocks linked together chronologically. Once data is added, it cannot be changed, and everyone in the network shares the same copy.",
+        "It's a distributed database where information is stored in blocks, secured by cryptography, and verified by consensus among network participants."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "blockchain_origins",
+      "patterns": [
+        "When was blockchain invented?",
+        "Who created blockchain?",
+        "Tell me about blockchain history",
+        "What is the origin of blockchain?",
+        "Who is Satoshi Nakamoto?"
+      ],
+      "responses": [
+        "The concept of blockchain dates back to 1991, when it was proposed as a way to timestamp digital documents. It was brought to life in 2009 by Satoshi Nakamoto with the launch of Bitcoin.",
+        "Blockchain began as a research concept in 1991, but became a reality in 2009 when Satoshi Nakamoto introduced it through Bitcoin."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "bitcoin_intro",
+      "patterns": [
+        "What is Bitcoin?",
+        "Why is Bitcoin important?",
+        "Tell me about Bitcoin",
+        "How does Bitcoin work?",
+        "What's special about Bitcoin?"
+      ],
+      "responses": [
+        "Bitcoin is the first and most famous cryptocurrency, running on a public blockchain. It allows secure, peer-to-peer transactions without the need for banks.",
+        "Bitcoin is a decentralized digital currency introduced in 2009 by Satoshi Nakamoto. It uses Proof of Work to verify transactions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "key_properties_blockchain",
+      "patterns": [
+        "What are the main features of blockchain?",
+        "Why is blockchain secure?",
+        "What makes blockchain special?",
+        "What are blockchain's key properties?"
+      ],
+      "responses": [
+        "Blockchain is decentralized, meaning no single authority controls it. It is immutable, so once data is recorded it can't be changed, and it’s secure thanks to cryptography.",
+        "Its key properties are decentralization, immutability, transparency, and cryptographic security."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "block_structure",
+      "patterns": [
+        "What is inside a blockchain block?",
+        "Explain block structure",
+        "What data does a blockchain block contain?",
+        "How is data stored in blockchain?"
+      ],
+      "responses": [
+        "A blockchain block contains a list of transactions, a timestamp, its own cryptographic hash, and the hash of the previous block, linking it to the chain.",
+        "Each block stores transaction data, the previous block's hash, its own hash, and a timestamp to ensure immutability."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "block_validation",
+      "patterns": [
+        "How are blocks validated in blockchain?",
+        "What is block validation?",
+        "How do nodes verify blocks?",
+        "Explain validation in blockchain"
+      ],
+      "responses": [
+        "Blocks are validated through consensus mechanisms like Proof of Work or Proof of Stake, where participants verify transactions and agree on the block's correctness.",
+        "Nodes check each transaction in a block for validity before it’s added to the blockchain."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "distributed_ledger",
+      "patterns": [
+        "What is a distributed ledger?",
+        "How does a distributed ledger work?",
+        "Explain DLT",
+        "What does DLT mean?",
+        "Tell me about distributed ledger technology"
+      ],
+      "responses": [
+        "A distributed ledger is a database spread across multiple nodes or locations, where all participants have a synchronized copy. It removes the need for a central authority and increases transparency.",
+        "DLT means Distributed Ledger Technology — it's the underlying system behind blockchains where data is shared and updated across multiple computers."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "centralized_vs_distributed",
+      "patterns": [
+        "Difference between centralized and distributed ledgers",
+        "Why is distributed better than centralized?",
+        "Explain centralized vs decentralized ledgers"
+      ],
+      "responses": [
+        "In a centralized ledger, one authority controls the database. In a distributed ledger, multiple nodes share and verify the same data, reducing the risk of tampering.",
+        "Centralized ledgers have a single point of control, while distributed ledgers rely on multiple participants, making them more resilient."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "permissioned_vs_permissionless",
+      "patterns": [
+        "What is a permissioned blockchain?",
+        "What is a permissionless blockchain?",
+        "Difference between permissioned and permissionless blockchain",
+        "Explain public vs private blockchain"
+      ],
+      "responses": [
+        "A permissionless blockchain, like Bitcoin, is open for anyone to join and participate. A permissioned blockchain, like Hyperledger, restricts access to approved members.",
+        "Public blockchains are open to all, while private (permissioned) blockchains limit participation to selected entities."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "hyperledger_frameworks",
+      "patterns": [
+        "What is Hyperledger?",
+        "Explain Hyperledger Fabric",
+        "What is Hyperledger Sawtooth?",
+        "Tell me about Hyperledger Burrow",
+        "What are the types of Hyperledger frameworks?"
+      ],
+      "responses": [
+        "Hyperledger is an open-source project by the Linux Foundation for developing enterprise blockchain solutions. Frameworks include Fabric, Sawtooth, and Burrow.",
+        "Hyperledger Fabric is a permissioned blockchain designed for enterprises, while Sawtooth focuses on modular architecture, and Burrow supports smart contracts in Ethereum Virtual Machine format."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "cryptography_in_blockchain",
+      "patterns": [
+        "How is cryptography used in blockchain?",
+        "What role does cryptography play in blockchain?",
+        "Explain cryptography in blockchain",
+        "Tell me about hashing in blockchain"
+      ],
+      "responses": [
+        "Blockchain uses cryptography to secure transactions and control the creation of new blocks. Hashing algorithms like SHA-256 ensure data integrity.",
+        "Cryptography provides security in blockchain through hashing, public-private key pairs, and digital signatures."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "hash_function",
+      "patterns": [
+        "What is hashing in blockchain?",
+        "Explain SHA-256",
+        "How does a hash work?",
+        "What is the purpose of hashing?"
+      ],
+      "responses": [
+        "Hashing converts any input into a fixed-length string. In blockchain, it ensures that data cannot be altered without detection. SHA-256 is the algorithm used in Bitcoin.",
+        "A hash is like a digital fingerprint of data — unique, fixed-length, and irreversible."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "public_private_keys",
+      "patterns": [
+        "What are public and private keys?",
+        "Explain public and private keys in blockchain",
+        "How do blockchain keys work?",
+        "Why do I need a private key?"
+      ],
+      "responses": [
+        "Public and private keys are cryptographic tools. The public key is like an address to receive funds, while the private key is a secret code to access them.",
+        "Your public key is shared to receive transactions, but your private key must remain secret to secure your funds."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "digital_signatures",
+      "patterns": [
+        "What is a digital signature in blockchain?",
+        "How do digital signatures work?",
+        "Why are digital signatures important?",
+        "Explain signing transactions"
+      ],
+      "responses": [
+        "A digital signature proves that a transaction came from the rightful owner and has not been altered. It's created using the sender's private key.",
+        "Digital signatures ensure authenticity and integrity in blockchain transactions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "smart_contracts",
+      "patterns": [
+        "What is a smart contract?",
+        "How do smart contracts work?",
+        "Explain smart contracts",
+        "What are DApps?"
+      ],
+      "responses": [
+        "A smart contract is a self-executing agreement coded on the blockchain. Once conditions are met, it automatically carries out the terms.",
+        "DApps, or decentralized applications, are powered by smart contracts and operate without central control."
+      ],
+      "context": [""]
+    }
+  ]
+  
