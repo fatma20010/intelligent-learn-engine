@@ -746,6 +746,7 @@ const FocusDetection = () => {
   const prevEyeRatioRef = useRef(0);
   const prevMouthRatioRef = useRef(0);
   const annoyedStartMsRef = useRef<number | null>(null);
+  const [showStressNotif, setShowStressNotif] = useState(false);
 
   useEffect(() => {
     let destroyed = false;
@@ -902,8 +903,8 @@ const FocusDetection = () => {
 
             // Heuristic thresholds and consecutive frame requirement (more sensitive)
             if (
-              eyeDarkRatio > 0.18 ||
-              mouthDarkRatio > 0.14 ||
+              eyeDarkRatio > 0.25 ||
+              mouthDarkRatio > 0.20 ||
               eyeSpike ||
               mouthSpike
             ) {
@@ -916,20 +917,22 @@ const FocusDetection = () => {
               annoyedStartMsRef.current = null;
             }
 
-            // Trigger after ~3 frames to be responsive
+            // Trigger after ~8 frames to be less sensitive
             const nowMs = Date.now();
             const annoyedDurationMs =
               annoyedStartMsRef.current !== null ? nowMs - annoyedStartMsRef.current : 0;
-            // 2.5 frames at ~10 FPS ~= 250ms
+            // 8 frames at ~10 FPS ~= 800ms, but we require 1000ms + 8 frames + 30s cooldown
             if (
-              annoyedDurationMs >= 250 &&
-              nowMs - lastEmotionNotificationRef.current > 10000
+              annoyedDurationMs >= 1000 &&
+              annoyedFramesRef.current >= 8 &&
+              nowMs - lastEmotionNotificationRef.current > 30000
             ) {
               lastEmotionNotificationRef.current = nowMs;
-              toast({
-                title: "We noticed you seem annoyed.",
-                description: "Would you like to share feedback to help us improve your learning experience?",
-              });
+              setShowStressNotif(true);
+              // Hide the image after 5 seconds
+              setTimeout(() => {
+                setShowStressNotif(false);
+              }, 5000);
             }
           } else {
             annoyedFramesRef.current = 0;
@@ -991,7 +994,7 @@ const FocusDetection = () => {
                   if (nowInner - lastPhoneDetectedRef.current > 8000) {
                     lastPhoneDetectedRef.current = nowInner;
                     toast({
-                      title: "Hey, focus! Phone detected!",
+                      title: "PHONE DETECTED: Please pay attention",
                       description:
                         "Please put your phone away and pay attention to the course.",
                       variant: "destructive",
@@ -1050,9 +1053,18 @@ const FocusDetection = () => {
   return (
     <>
       <video ref={videoRef} style={{ display: "none" }} autoPlay playsInline muted />
-      <div className="fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm z-50">
+      <div className="fixed top-6 right-6 bg-yellow-500 text-black px-5 py-3 rounded-xl text-base z-50 shadow-lg">
         {debugInfo}
       </div>
+      {showStressNotif && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/50">
+          <img 
+            src="/stressnotif.png" 
+            alt="Stress notification" 
+            className="max-w-md max-h-96 object-contain rounded-2xl shadow-2xl"
+          />
+        </div>
+      )}
     </>
   );
 };
