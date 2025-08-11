@@ -143,7 +143,7 @@ export default function FocusDetection() {
             const mouthSpike = mouthDarkRatio - prevMouth > 0.06;
             prevEyeRatioRef.current = prevEye * 0.6 + eyeDarkRatio * 0.4;
             prevMouthRatioRef.current = prevMouth * 0.6 + mouthDarkRatio * 0.4;
-            if (eyeDarkRatio > 0.22 || mouthDarkRatio > 0.17 || eyeSpike || mouthSpike) {
+            if (eyeDarkRatio > 0.18 || mouthDarkRatio > 0.14 || eyeSpike || mouthSpike) {
               if (annoyedStartMsRef.current === null) annoyedStartMsRef.current = Date.now();
               annoyedFramesRef.current += 1;
             } else {
@@ -153,7 +153,7 @@ export default function FocusDetection() {
             const nowMs = Date.now();
             const annoyedDurationMs =
               annoyedStartMsRef.current !== null ? nowMs - annoyedStartMsRef.current : 0;
-            if (annoyedDurationMs >= 600 && annoyedFramesRef.current >= 5 && nowMs - lastEmotionNotificationRef.current > 20000) {
+            if (annoyedDurationMs >= 250 && nowMs - lastEmotionNotificationRef.current > 10000) {
               lastEmotionNotificationRef.current = nowMs;
               setShowStressNotif(true);
               // Hide the image after 5 seconds

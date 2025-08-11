@@ -901,10 +901,10 @@ const FocusDetection = () => {
             prevEyeRatioRef.current = prevEye * 0.6 + eyeDarkRatio * 0.4;
             prevMouthRatioRef.current = prevMouth * 0.6 + mouthDarkRatio * 0.4;
 
-            // Heuristic thresholds and consecutive frame requirement (moderate sensitivity)
+            // Heuristic thresholds and consecutive frame requirement (more sensitive)
             if (
-              eyeDarkRatio > 0.22 ||
-              mouthDarkRatio > 0.17 ||
+              eyeDarkRatio > 0.18 ||
+              mouthDarkRatio > 0.14 ||
               eyeSpike ||
               mouthSpike
             ) {
@@ -917,15 +917,14 @@ const FocusDetection = () => {
               annoyedStartMsRef.current = null;
             }
 
-            // Trigger after ~5 frames for moderate sensitivity
+            // Trigger after ~3 frames to be responsive
             const nowMs = Date.now();
             const annoyedDurationMs =
               annoyedStartMsRef.current !== null ? nowMs - annoyedStartMsRef.current : 0;
-            // 5 frames at ~10 FPS ~= 500ms, but we require 600ms + 5 frames + 20s cooldown
+            // 2.5 frames at ~10 FPS ~= 250ms
             if (
-              annoyedDurationMs >= 600 &&
-              annoyedFramesRef.current >= 5 &&
-              nowMs - lastEmotionNotificationRef.current > 20000
+              annoyedDurationMs >= 250 &&
+              nowMs - lastEmotionNotificationRef.current > 10000
             ) {
               lastEmotionNotificationRef.current = nowMs;
               setShowStressNotif(true);
