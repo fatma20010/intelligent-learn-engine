@@ -122,10 +122,10 @@ export default function FocusDetection() {
             const brightness = r + g + b;
             if (y < eyeMaxY) {
               eyeTotalCount++;
-              if (brightness < 150) eyeDarkCount++;
+              if (brightness < 120) eyeDarkCount++; // reduced sensitivity - only very dark areas
             } else if (y >= mouthMinY) {
               mouthTotalCount++;
-              if (brightness < 160) mouthDarkCount++;
+              if (brightness < 130) mouthDarkCount++; // reduced sensitivity - only very dark areas
             }
           }
           const totalPixels = data.length / 4;
@@ -139,11 +139,11 @@ export default function FocusDetection() {
             const mouthDarkRatio = mouthDarkCount / mouthTotalCount;
             const prevEye = prevEyeRatioRef.current;
             const prevMouth = prevMouthRatioRef.current;
-            const eyeSpike = eyeDarkRatio - prevEye > 0.07;
-            const mouthSpike = mouthDarkRatio - prevMouth > 0.06;
-            prevEyeRatioRef.current = prevEye * 0.6 + eyeDarkRatio * 0.4;
-            prevMouthRatioRef.current = prevMouth * 0.6 + mouthDarkRatio * 0.4;
-            if (eyeDarkRatio > 0.18 || mouthDarkRatio > 0.14 || eyeSpike || mouthSpike) {
+            const eyeSpike = eyeDarkRatio - prevEye > 0.12; // increased threshold for spike detection
+            const mouthSpike = mouthDarkRatio - prevMouth > 0.10; // increased threshold for spike detection
+            prevEyeRatioRef.current = prevEye * 0.7 + eyeDarkRatio * 0.3; // more smoothing
+            prevMouthRatioRef.current = prevMouth * 0.7 + mouthDarkRatio * 0.3; // more smoothing
+            if (eyeDarkRatio > 0.25 || mouthDarkRatio > 0.20 || eyeSpike || mouthSpike) { // increased thresholds
               if (annoyedStartMsRef.current === null) annoyedStartMsRef.current = Date.now();
               annoyedFramesRef.current += 1;
             } else {
@@ -153,7 +153,8 @@ export default function FocusDetection() {
             const nowMs = Date.now();
             const annoyedDurationMs =
               annoyedStartMsRef.current !== null ? nowMs - annoyedStartMsRef.current : 0;
-            if (annoyedDurationMs >= 250 && nowMs - lastEmotionNotificationRef.current > 10000) {
+            // Trigger after more frames and longer duration for less sensitivity
+            if (annoyedDurationMs >= 800 && annoyedFramesRef.current >= 6 && nowMs - lastEmotionNotificationRef.current > 30000) {
               lastEmotionNotificationRef.current = nowMs;
               setShowStressNotif(true);
               // Hide the image after 5 seconds
