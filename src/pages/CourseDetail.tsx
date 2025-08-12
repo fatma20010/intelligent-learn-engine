@@ -870,10 +870,10 @@ const FocusDetection = () => {
             const brightness = r + g + b; // 0..765
             if (y < eyeMaxY) {
               eyeTotalCount++;
-              if (brightness < 150) eyeDarkCount++; // increased sensitivity
+              if (brightness < 120) eyeDarkCount++; // reduced sensitivity - only very dark areas
             } else if (y >= mouthMinY) {
               mouthTotalCount++;
-              if (brightness < 160) mouthDarkCount++; // increased sensitivity
+              if (brightness < 130) mouthDarkCount++; // reduced sensitivity - only very dark areas
             }
           }
           
@@ -894,17 +894,17 @@ const FocusDetection = () => {
             // Spike detection (compare to smoothed previous ratios)
             const prevEye = prevEyeRatioRef.current;
             const prevMouth = prevMouthRatioRef.current;
-            const eyeSpike = eyeDarkRatio - prevEye > 0.07;
-            const mouthSpike = mouthDarkRatio - prevMouth > 0.06;
+            const eyeSpike = eyeDarkRatio - prevEye > 0.12; // increased threshold for spike detection
+            const mouthSpike = mouthDarkRatio - prevMouth > 0.10; // increased threshold for spike detection
 
             // Update smoothed history
-            prevEyeRatioRef.current = prevEye * 0.6 + eyeDarkRatio * 0.4;
-            prevMouthRatioRef.current = prevMouth * 0.6 + mouthDarkRatio * 0.4;
+            prevEyeRatioRef.current = prevEye * 0.7 + eyeDarkRatio * 0.3; // more smoothing
+            prevMouthRatioRef.current = prevMouth * 0.7 + mouthDarkRatio * 0.3; // more smoothing
 
-            // Heuristic thresholds and consecutive frame requirement (more sensitive)
+            // Heuristic thresholds and consecutive frame requirement (less sensitive)
             if (
-              eyeDarkRatio > 0.18 ||
-              mouthDarkRatio > 0.14 ||
+              eyeDarkRatio > 0.25 || // increased threshold
+              mouthDarkRatio > 0.20 || // increased threshold
               eyeSpike ||
               mouthSpike
             ) {
@@ -917,14 +917,15 @@ const FocusDetection = () => {
               annoyedStartMsRef.current = null;
             }
 
-            // Trigger after ~3 frames to be responsive
+            // Trigger after more frames and longer duration for less sensitivity
             const nowMs = Date.now();
             const annoyedDurationMs =
               annoyedStartMsRef.current !== null ? nowMs - annoyedStartMsRef.current : 0;
-            // 2.5 frames at ~10 FPS ~= 250ms
+            // 8 frames at ~10 FPS ~= 800ms (was 250ms)
             if (
-              annoyedDurationMs >= 250 &&
-              nowMs - lastEmotionNotificationRef.current > 10000
+              annoyedDurationMs >= 800 &&
+              annoyedFramesRef.current >= 6 && // require more consecutive frames
+              nowMs - lastEmotionNotificationRef.current > 30000 // 30 second cooldown (was 10 seconds)
             ) {
               lastEmotionNotificationRef.current = nowMs;
               setShowStressNotif(true);
