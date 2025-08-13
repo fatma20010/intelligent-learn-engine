@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from "react";
 import FocusDetection from "@/components/FocusDetection";
-import CourseChatbot from "@/components/CourseChatbot";
 import { useNavigate } from "react-router-dom";
 
 // 25 questions covering Blockchain Fundamentals
@@ -305,14 +304,6 @@ export default function FinalAssessmentBlockchain() {
     <div className="min-h-screen bg-gradient-to-br from-white via-company-primary to-company-secondary py-12 px-2 flex justify-center items-start relative">
       {/* AI focus/phone detection */}
       <FocusDetection />
-      {/* Course chatbot (Blockchain Fundamentals) */}
-      <CourseChatbot
-        label="Blockchain Fundamentals Chat"
-        intentsPath="/intentsb.json"
-        scopeDescription="Blockchain Fundamentals topics like distributed ledgers, cryptography, keys/signatures, smart contracts, privacy, consensus, and applications"
-        placeholder="Ask about blockchain, DLT, cryptography, smart contracts…"
-        strictGuard={false}
-      />
       <div className="w-full max-w-3xl bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white/10">
         <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight text-center drop-shadow-lg">Final Assessment – Blockchain Fundamentals</h1>
         <p className="text-lg text-company-secondary text-center mb-8">Answer all questions. You must get at least 15 correct to pass.</p>
